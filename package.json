@@ -1,8 +1,9 @@
 {
   "name": "aemet-es-sdk",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
+  "main": "./dist/aemet-es-sdk.es.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -13,5 +14,17 @@
   "devDependencies": {
     "vite": "^8.0.12",
     "standard": "^17.1.2"
-  }
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/aemet-es-sdk.es.js",
+      "require": "./dist/aemet-es-sdk.umd.js"
+    }
+  },
+  "files": [
+    "dist"
+  ]
 }
