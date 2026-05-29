@@ -1,9 +1,13 @@
 import path from 'path'
 import { resolve } from 'node:path'
 import { defineConfig } from 'vite'
+import dts from 'vite-plugin-dts'
 
 export default defineConfig({
-  plugins: [],
+  plugins: [dts({
+    insertTypesEntry: true,
+    copyDtsFiles: true
+  })],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src')

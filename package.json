@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "main": "./dist/aemet-es-sdk.es.js",
+  "types": "./dist/aemet-es-sdk.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -12,8 +13,9 @@
     "lint:fix": "standard --fix"
   },
   "devDependencies": {
+    "standard": "^17.1.2",
     "vite": "^8.0.12",
-    "standard": "^17.1.2"
+    "vite-plugin-dts": "^5.0.1"
   },
   "engines": {
     "node": ">=24"
@@ -21,7 +23,8 @@
   "exports": {
     ".": {
       "import": "./dist/aemet-es-sdk.es.js",
-      "require": "./dist/aemet-es-sdk.umd.js"
+      "require": "./dist/aemet-es-sdk.umd.js",
+      "types": "./dist/aemet-es-sdk.d.ts"
     }
   },
   "files": [
